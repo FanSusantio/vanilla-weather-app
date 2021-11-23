@@ -67,3 +67,16 @@ footer {
 .weather-stats {
   text-align: right;
 }
+
+.weather-temperature .active {
+  color: #202124;
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+#celsius-link,
+#fahrenheit-link {
+  text-decoration: none;
+}
