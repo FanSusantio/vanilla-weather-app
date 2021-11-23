@@ -45,9 +45,21 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", `${response.data.weather[0].description}`);
 }
 
-let apiKey = "a74b2bfdc6455b21c1aa51ce43d055d0";
-let cityInput = "Doncaster East";
-let units = "metric";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}&units=${units}`;
+function search(cityInput) {
+  let apiKey = "a74b2bfdc6455b21c1aa51ce43d055d0";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Melbourne");
+
+// search functionality
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
