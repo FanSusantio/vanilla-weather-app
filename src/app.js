@@ -1,6 +1,5 @@
 function formatDate(timestamp) {
   // calculate the date
-  console.log(timestamp);
   let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
@@ -25,14 +24,13 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response);
-
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#current-temp");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.name;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
@@ -40,6 +38,11 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", `${response.data.weather[0].description}`);
 }
 
 let apiKey = "a74b2bfdc6455b21c1aa51ce43d055d0";
