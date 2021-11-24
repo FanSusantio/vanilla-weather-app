@@ -1,5 +1,5 @@
 body {
-  font-family: "Josefin Sans", "Google Sans", arial, sans-serif-medium,
+  font-family: "Mochiy Pop One", "Google Sans", arial, sans-serif-medium,
     sans-serif;
   color: #3e6faa;
   background: no-repeat url("../images/neon_street.jpg");
@@ -29,7 +29,7 @@ li:first-letter {
   text-transform: capitalize;
 }
 a {
-  color: #559fc2;
+  color: #10dcf9;
   text-decoration: none;
 }
 
@@ -40,10 +40,6 @@ footer {
   text-align: center;
   color: rgba(39, 33, 66, 0.4);
 }
-/* url('../../images/image.png'); */
-.container {
-  height: 2000;
-}
 
 /* weather section styling*/
 .weather-app {
@@ -52,32 +48,13 @@ footer {
   margin: 20px auto;
   max-width: 630px;
   border-radius: 20px;
-  background: #fd8fe5de;
-
-  /* background: no-repeat url("../images/landscape.svg");
-  background-size: cover;
-  width: 100%;
-  position: relative;
-  vertical-align: top; */
+  background: #ff9eeaf6;
 }
 
 #weather-app {
   position: relative;
   border-radius: 20px;
-  /* min-width: 427px;
-  background-size: cover;
-   background: no-repeat url("../images/landscape.svg") top; */
 }
-/* #weather-app > img {
-  vertical-align: top;
-  width: 100%; max width */
-/* height: 0%; */
-/* opacity: 0; } make it transparent */
-/* #weather-app > div {
-  top: 0;
-  width: 100%;
-  height: 100%;
-} */
 .units {
   display: inline-block;
   font-size: 16px;
@@ -123,7 +100,7 @@ footer {
 
 /* search bar section styling*/
 .search_box {
-  background: #00c4e7;
+  background: #10dcf9;
   position: relative;
   padding: 0px;
   border-radius: 50px;
