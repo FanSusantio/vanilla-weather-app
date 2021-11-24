@@ -11,6 +11,12 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script
       src="https://kit.fontawesome.com/d2fcf4fdcb.js"
@@ -19,32 +25,36 @@
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="weather-app">
-        <nav class="navbar navbar-light bg-light">
-          <div class="container-fluid">
-            <form id="search-form" class="d-flex mx-auto">
-              <input
-                id="city-input"
-                class="form-control me-2"
-                type="search"
-                placeholder="Enter city name..."
-                aria-label="Search"
-                autofocus="on"
-                autocomplete="off"
-              />
+    <div id="container" class="container">
+      <div id="weather-app" class="weather-app">
+        <div class="search_box">
+          <nav class="navbar navbar-light">
+            <div class="container-fluid">
+              <form id="search-form" class="d-flex mx-auto">
+                <input
+                  id="city-input"
+                  class="search_bar form-control me-2"
+                  type="search"
+                  placeholder="Enter city name..."
+                  aria-label="Search"
+                  autofocus="on"
+                  autocomplete="off"
+                />
 
-              <input
-                type="submit"
-                class="btn btn-outline-success"
-                value="Search"
-              />
-              <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-            </form>
-          </div>
-        </nav>
+                <input type="submit" hidden />
+                <div class="search_btn">
+                  <a href="#" class="search_icon"
+                    ><i class="fas fa-search"></i
+                  ></a>
+                </div>
+              </form>
+            </div>
+          </nav>
+        </div>
+
         <h1 id="city"></h1>
-        <ul>
+
+        <ul class="weather-description">
           <li>Last updated on <span id="date"></span></li>
           <li id="description"></li>
         </ul>
@@ -74,6 +84,7 @@
             </ul>
           </div>
         </div>
+
         <footer>
           This project was coded by
           <a
@@ -95,8 +106,13 @@
             target="_blank"
             rel="noopener noreferrer"
             >hosted on Netlify</a
+          >.<br />
+          Image
+          <a href="http://www.freepik.com"
+            >designed by pikisuperstar / Freepik</a
           >
         </footer>
+        <!-- <img src="images/landscape.svg" /> -->
       </div>
     </div>
   </body>
