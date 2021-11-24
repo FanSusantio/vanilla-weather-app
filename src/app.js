@@ -84,8 +84,13 @@ function displayCelsiusTemperature(event) {
 let celsiusTemperature = null;
 
 // search functionality (form is a global variable)
+
+// * as per SheCodes demo * //
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let searchButton = document.querySelector(".search_btn");
+searchButton.addEventListener("click", handleSubmit);
 
 // temperature unit conversion (fahrenheitLink is a global variable)
 let fahrenheitLink = document.querySelector("#fahrenheit-link");

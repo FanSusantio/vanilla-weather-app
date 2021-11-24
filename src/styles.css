@@ -1,12 +1,16 @@
 body {
-  font-family: "Google Sans", arial, sans-serif-medium, sans-serif;
+  font-family: "Josefin Sans", "Google Sans", arial, sans-serif-medium,
+    sans-serif;
+  color: #3e6faa;
+  background: no-repeat url("../images/neon_street.jpg");
+  background-size: cover;
+  background-color: #360062;
 }
 h1 {
-  color: #202124;
-  font-size: 22px;
-  font-weight: 400;
+  font-size: 30px;
+  font-weight: 500;
   line-height: 26px;
-  margin-top: 10px;
+  margin: 20px 10px 0 10px;
 }
 
 ul {
@@ -14,7 +18,7 @@ ul {
   margin: 0 0 10px;
 }
 li {
-  color: #70757a;
+  color: #7f7f7f;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -24,6 +28,10 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
+a {
+  color: #559fc2;
+  text-decoration: none;
+}
 
 footer {
   font-size: 14px;
@@ -32,6 +40,10 @@ footer {
   text-align: center;
   color: rgba(39, 33, 66, 0.4);
 }
+/* url('../../images/image.png'); */
+.container {
+  height: 2000;
+}
 
 /* weather section styling*/
 .weather-app {
@@ -39,10 +51,34 @@ footer {
   padding: 15px;
   margin: 20px auto;
   max-width: 630px;
-  border-radius: 10px;
+  border-radius: 20px;
+  background: #fd51d7;
+
+  /* background: no-repeat url("../images/landscape.svg");
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  vertical-align: top; */
 }
+
+#weather-app {
+  position: relative;
+  border-radius: 20px;
+  /* min-width: 427px;
+  background-size: cover;
+   background: no-repeat url("../images/landscape.svg") top; */
+}
+/* #weather-app > img {
+  vertical-align: top;
+  width: 100%; max width */
+/* height: 0%; */
+/* opacity: 0; } make it transparent */
+/* #weather-app > div {
+  top: 0;
+  width: 100%;
+  height: 100%;
+} */
 .units {
-  color: rgb(32, 33, 36);
   display: inline-block;
   font-size: 16px;
   font-weight: 400;
@@ -52,7 +88,6 @@ footer {
   vertical-align: top;
 }
 .temperature {
-  color: #202124;
   font-size: 48px;
   font-weight: 400;
   line-height: 1;
@@ -70,7 +105,7 @@ footer {
 }
 
 .weather-temperature .active {
-  color: #202124;
+  color: #3e6faa;
   cursor: default;
 }
 .weather-temperature .active:hover {
@@ -82,16 +117,59 @@ footer {
   text-decoration: none;
 }
 
+.weather-description {
+  margin: 0 10px 10px 10px;
+}
+
 /* search bar section styling*/
+.search_box {
+  background: #8bd1f1;
+  position: relative;
+  padding: 0px;
+  border-radius: 50px;
+  justify-content: space-between;
+}
+
+input {
+  font-size: 50px;
+}
+
+.search_bar,
+.search_bar:focus {
+  color: #3b5f8b;
+  background: #b2e0f5;
+  border-radius: 50px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 3px 12px 3px 12px;
+}
+
+.search_bar:focus {
+  outline: none !important;
+  border: 3px solid white;
+  box-shadow: none;
+}
+
+.search_btn {
+  background: #b2e0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+}
 
 .search_icon {
-  height: 40px;
-  width: 40px;
+  width: 50px;
+  height: 50px;
+
   float: right;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+
   color: white;
   text-decoration: none;
 }
