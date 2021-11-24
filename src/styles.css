@@ -33,6 +33,7 @@ footer {
   color: rgba(39, 33, 66, 0.4);
 }
 
+/* weather section styling*/
 .weather-app {
   border: 1px solid #dadde1;
   padding: 15px;
@@ -78,5 +79,19 @@ footer {
 
 #celsius-link,
 #fahrenheit-link {
+  text-decoration: none;
+}
+
+/* search bar section styling*/
+
+.search_icon {
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
   text-decoration: none;
 }
