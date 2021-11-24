@@ -2,6 +2,7 @@ body {
   font-family: "Josefin Sans", "Google Sans", arial, sans-serif-medium,
     sans-serif;
   color: #3e6faa;
+  background: no-repeat url("images/landscape.svg");
 }
 h1 {
   font-size: 30px;
