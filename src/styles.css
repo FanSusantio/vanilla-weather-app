@@ -1,12 +1,13 @@
 body {
-  font-family: "Google Sans", arial, sans-serif-medium, sans-serif;
+  font-family: "Josefin Sans", "Google Sans", arial, sans-serif-medium,
+    sans-serif;
+  color: #3e6faa;
 }
 h1 {
-  color: #202124;
-  font-size: 22px;
-  font-weight: 400;
+  font-size: 30px;
+  font-weight: 500;
   line-height: 26px;
-  margin-top: 10px;
+  margin: 20px 10px 0 10px;
 }
 
 ul {
@@ -14,7 +15,7 @@ ul {
   margin: 0 0 10px;
 }
 li {
-  color: #70757a;
+  color: #7f7f7f;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -23,6 +24,10 @@ li {
 
 li:first-letter {
   text-transform: capitalize;
+}
+a {
+  color: #559fc2;
+  text-decoration: none;
 }
 
 footer {
@@ -39,10 +44,9 @@ footer {
   padding: 15px;
   margin: 20px auto;
   max-width: 630px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .units {
-  color: rgb(32, 33, 36);
   display: inline-block;
   font-size: 16px;
   font-weight: 400;
@@ -52,7 +56,6 @@ footer {
   vertical-align: top;
 }
 .temperature {
-  color: #202124;
   font-size: 48px;
   font-weight: 400;
   line-height: 1;
@@ -70,7 +73,7 @@ footer {
 }
 
 .weather-temperature .active {
-  color: #202124;
+  color: #3e6faa;
   cursor: default;
 }
 .weather-temperature .active:hover {
@@ -80,6 +83,10 @@ footer {
 #celsius-link,
 #fahrenheit-link {
   text-decoration: none;
+}
+
+.weather-description {
+  margin: 0 10px 10px 10px;
 }
 
 /* search bar section styling*/
@@ -97,7 +104,7 @@ input {
 
 .search_bar,
 .search_bar:focus {
-  color: #3e6faa;
+  color: #3b5f8b;
   background: #b2e0f5;
   border-radius: 50px;
   border: none;
