@@ -104,7 +104,7 @@ footer {
 
 /* search bar section styling*/
 .search_box {
-  background: #6502cfff;
+  background: rgb(101, 2, 207, 0.6);
   position: relative;
   padding: 0px;
   border-radius: 50px;
@@ -119,12 +119,12 @@ input {
 
 .search_bar,
 .search_bar:focus {
-  color: #3b5f8b;
-  background: #28e5f9ff;
+  color: rgb(255, 245, 236);
+  background: rgb(254, 221, 212, 0.6);
   border-radius: 35px;
   border: none;
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 400;
   padding: 3px 12px 3px 12px;
 }
 
@@ -135,7 +135,7 @@ input {
 }
 
 .search_btn {
-  background: #28e5f9ff;
+  background: rgb(254, 221, 212, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
