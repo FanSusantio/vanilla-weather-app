@@ -106,7 +106,7 @@ footer {
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -123,6 +123,9 @@ footer {
   color: rgb(255, 245, 236, 0.6);
 }
 
+.col {
+  padding: 12px 12px 0 12px;
+}
 /* search bar section styling*/
 .search_box {
   background: rgb(101, 2, 207, 0.6);
