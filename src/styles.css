@@ -85,14 +85,6 @@ footer {
   text-align: right;
 }
 
-.weather-temperature .active {
-  color: #fff5ecff;
-  cursor: default;
-}
-.weather-temperature .active:hover {
-  text-decoration: none;
-}
-
 .weather-description {
   margin: 0 10px 10px 10px;
 }
@@ -139,6 +131,7 @@ input {
   font-size: 18px;
   font-weight: 400;
   padding: 3px 12px 3px 12px;
+  margin-left: 8px;
 }
 
 .search_bar:focus {
@@ -147,7 +140,8 @@ input {
   box-shadow: 0 0 10px #ef16bc;
 }
 
-.search_btn {
+.search_btn,
+.locate_btn {
   background: rgb(254, 221, 212, 0.6);
   display: flex;
   justify-content: center;
@@ -157,7 +151,8 @@ input {
   border-radius: 50px;
 }
 
-.search_icon {
+.search_icon,
+.locate_icon {
   width: 50px;
   height: 50px;
 
