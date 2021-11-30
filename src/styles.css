@@ -80,11 +80,23 @@ footer {
   vertical-align: top;
   line-height: 60px;
 }
-.weather-icon {
+
+#weather-icon {
+  text-align: center;
   display: inline-block;
-  margin-top: 0;
+  margin: 5px;
   height: 60px;
+  width: 60px;
+  font-size: 50px;
 }
+
+#weather-forecast-icon {
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  font-size: 35px;
+}
+
 .weather-stats {
   text-align: right;
 }

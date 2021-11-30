@@ -33,6 +33,7 @@ function formatDay(timestamp) {
 
 function displayForecast(response) {
   let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -46,13 +47,9 @@ function displayForecast(response) {
                 <div class="weather-forecast-date">${formatDay(
                   forecastDay.dt
                 )}</div>
-                <img
-                  src="https://openweathermap.org/img/wn/${
-                    forecastDay.weather[0].icon
-                  }@2x.png"
-                  alt=""
-                  width="55"
-                />
+                              <i id = "weather-forecast-icon" class="wi wi-owm-${
+                                forecastDay.weather[0].id
+                              }"></i>
                 <div class="weather-forecast-temperature">
                   <span class="weather-forecast-temperature-max">${Math.round(
                     forecastDay.temp.max
@@ -82,7 +79,8 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
-  let iconElement = document.querySelector("#icon");
+  let iconElement = document.querySelector(".wi");
+  console.log(iconElement);
 
   celsiusTemperature = response.data.main.temp;
 
@@ -92,11 +90,7 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute(
-    "src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", `${response.data.weather[0].description}`);
+  iconElement.setAttribute("class", `wi wi-owm-${response.data.weather[0].id}`);
 
   getForecast(response.data.coord);
 }
@@ -141,4 +135,4 @@ locateButton.addEventListener("click", getCurrentPosition);
 // searchButton.addEventListener("click", handleSubmit);
 
 //default search on first load
-search("Melbourne");
+search("Templestowe");
