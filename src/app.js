@@ -47,7 +47,7 @@ function displayForecast(response) {
                   forecastDay.dt
                 )}</div>
                 <img
-                  src="http://openweathermap.org/img/wn/${
+                  src="https://openweathermap.org/img/wn/${
                     forecastDay.weather[0].icon
                   }@2x.png"
                   alt=""
@@ -94,7 +94,7 @@ function displayTemperature(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", `${response.data.weather[0].description}`);
 
@@ -124,6 +124,9 @@ form.addEventListener("submit", handleSubmit);
 
 let searchButton = document.querySelector(".search_btn");
 searchButton.addEventListener("click", handleSubmit);
+
+let locateButton = document.querySelector("#locate-button");
+locateButton.addEventListener("click", getLocation);
 
 //default search on first load
 search("Melbourne");
