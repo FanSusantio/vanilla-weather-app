@@ -96,7 +96,7 @@ footer {
 
 .weather-forecast-date {
   font-size: 16px;
-  color: lightgrey;
+  color: rgb(255, 245, 236, 0.8);
 }
 
 .weather-forecast-temperature {
@@ -104,7 +104,7 @@ footer {
 }
 
 .weather-forecast-temperature-min {
-  color: lightgrey;
+  color: rgb(255, 245, 236, 0.8);
 }
 
 /* search bar section styling*/
