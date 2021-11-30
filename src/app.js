@@ -125,8 +125,20 @@ form.addEventListener("submit", handleSubmit);
 let searchButton = document.querySelector(".search_btn");
 searchButton.addEventListener("click", handleSubmit);
 
-let locateButton = document.querySelector("#locate-button");
-locateButton.addEventListener("click", getLocation);
+function searchLocation(position) {
+  let apiKey = "a74b2bfdc6455b21c1aa51ce43d055d0";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function getCurrentPosition() {
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let locateButton = document.querySelector("#locate_btn");
+locateButton.addEventListener("click", getCurrentPosition);
+// searchButton.addEventListener("click", handleSubmit);
 
 //default search on first load
 search("Melbourne");
