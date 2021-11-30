@@ -93,11 +93,6 @@ footer {
   text-decoration: none;
 }
 
-#celsius-link,
-#fahrenheit-link {
-  text-decoration: none;
-}
-
 .weather-description {
   margin: 0 10px 10px 10px;
 }
